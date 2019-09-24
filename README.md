@@ -3,7 +3,7 @@ android-referrer-plugin
 
 This plugin captures the referrer value passed when an android app is installed from a webpage and stores it in the applications shared preferences for later retrieval. 
 
-You'll typically want to use the [AppPreferences plugin](https://github.com/8zrealestate/AppPreferences) to pull the referrer value into your phonegap app for your javascript code to manipulate.
+You'll typically want to use the [SharedPreferences plugin](https://github.com/adriano-di-giovanni/cordova-plugin-shared-preferences) to pull the referrer value into your Cordova app for your javascript code to manipulate.
 
 ## Purpose
 
@@ -13,9 +13,7 @@ Don't forget when using this plugin that if an app is installed directly from Go
 
 ## Install
 
-This plugin uses [plugman](https://github.com/apache/cordova-plugman)
-
-`cordova plugins add https://github.com/8zrealestate/android-referrer-plugin`
+`cordova plugins add https://github.com/joelnagy/android-referrer-plugin`
 
 ## Usage
 
@@ -33,7 +31,7 @@ run `adb shell` and then
 
 ```
 am broadcast -a com.android.vending.INSTALL_REFERRER \
--n <your package here>/com.eightz.mobile.cordova.plugin.android.referrer.Receiver \
+-n <your package here>/com.xealot.mobile.cordova.plugin.android.referrer.Receiver \
 --es "referrer" "textinreferrer"
 ```
 
