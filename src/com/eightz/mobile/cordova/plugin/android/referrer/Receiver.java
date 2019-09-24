@@ -1,32 +1,33 @@
-package com.eightz.mobile.cordova.plugin.android.referrer;
+package com.xealot.cordova.plugin.android.referrer;
 
-import android.os.Bundle;
 import android.content.BroadcastReceiver;
-import android.content.SharedPreferences;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.preference.PreferenceManager;
+import android.os.Bundle;
 
-import android.util.Log;
+// import android.util.Log;
 
 public class Receiver extends BroadcastReceiver {
 
-@Override
-public void onReceive(Context context, Intent intent) {
+    private static final String REFERRER = "referrer";
 
-    Bundle extras = intent.getExtras();
-    if (extras != null) {
-    	String referrerString = extras.getString("referrer");
-        if (referrerString != null) {
-    	    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    @Override
+    public void onReceive (Context context, Intent intent) {
 
-    	    Editor edit = sharedPreferences.edit();
-    	    edit.putString("referrer", referrerString);
-    	    edit.commit();
+        Bundle extras = intent.getExtras();
+        if ( extras != null ) {
+            String referrerString = extras.getString( REFERRER );
+            if ( referrerString != null ) {
+                SharedPreferences sharedPreferences = context.getSharedPreferences( REFERRER, Context.MODE_PRIVATE );
+
+    	        Editor edit = sharedPreferences.edit();
+    	        edit.putString( REFERRER, referrerString );
+    	        edit.commit();
+
+                // Log.i( REFERRER, "RECEIVER DEBUG: " + referrerString );
+            }
         }
     }
-}
- 
-} // end of class
+} //: Receiver
