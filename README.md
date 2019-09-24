@@ -13,7 +13,7 @@ Don't forget when using this plugin that if an app is installed directly from Go
 
 ## Install
 
-`cordova plugins add https://github.com/joelnagy/android-referrer-plugin`
+`cordova plugins add https://github.com/joelnagy/android-referrer-plugin-shared-prefs`
 
 ## Usage
 
