@@ -1,4 +1,4 @@
-android-referrer-plugin
+android-referrer-plugin-shared-prefs
 =======================
 
 This plugin captures the referrer value passed when an android app is installed from a webpage and stores it in the applications shared preferences for later retrieval. 
