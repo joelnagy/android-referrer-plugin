@@ -11,7 +11,7 @@
 	<repo>https://github.com/joelnagy/android-referrer-plugin.git</repo>
     
   	<platform name="android">
-		<source-file src="src/android/Receiver.java" target-dir="src/com/xealot/referrer" />
+		<source-file src="src/android/Receiver.java" target-dir="src/com/xealot/referrer/" />
 
 	 	<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<receiver android:exported="true" android:name="com.xealot.mobile.cordova.plugin.android.referrer.Receiver">
